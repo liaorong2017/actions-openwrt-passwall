@@ -3,6 +3,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
+
 # Blog: https://p3terx.com
 #=================================================
 
@@ -80,7 +81,7 @@ jobs:
         make defconfig
 
     - name: SSH connection to Actions
-      uses: actions/checkout@v2
+      uses: P3TERX/ssh2actions@v1.0.0
       if: env.SSH_ACTIONS == 'true'
     - name: Download package
       id: package
